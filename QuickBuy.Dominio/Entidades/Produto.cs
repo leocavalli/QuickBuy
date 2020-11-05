@@ -9,7 +9,10 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (Preco < 0)
+                AdicionarMensagem("Preço deve ter um valor positivo");
+            if (string.IsNullOrEmpty(Nome))
+                AdicionarMensagem("Você precisa dar um nome ao produto");
         }
     }
 }

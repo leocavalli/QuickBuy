@@ -8,7 +8,10 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (ProdutoId <= 0)
+                AdicionarMensagem("Não foi identificado a referência do produto");
+            if (Quantidade <= 0)
+                AdicionarMensagem("Quantidade não permitida");
         }
     }
 }
